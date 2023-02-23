@@ -1,0 +1,29 @@
+html  {
+  background-color: black;
+}
+
+header  {
+  width: 90%;
+  margin: 10px;
+  text-align: center;
+  background-color: wheat;
+}
+
+header h1 {
+ color: white;
+}
+
+.row {
+  width: 900px;
+  margin: 0 auto;
+  padding:75px;
+}
+
+.column {
+  width: 50%;
+  background-color: blanchedalmond;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
