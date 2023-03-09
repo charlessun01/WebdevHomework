@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+body {
+    background-color: black;
+    background-image: url("pic/background.gif");
+    margin: 0;
+    padding: 0;
+    font-family: 'IM Fell Great Primer', serif;
+}
+  
+header {
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+h1 {
+  font-size: 7rem;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+/*  max-width: 960px;*/
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.grid-item {
+  height: 70vh;
+/*  background-color: wheat;*/
+  position: relative;
+  flex: 1 0 0;
+  text-align: center;
+}
+
+.text{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 450%;
+  color: white;
+/*  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+  text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
+  position: absolute;
+  transition: all 0.7s ease-in-out;
+}
+
+.cover{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.grid-item img{
+  width: 40%;
+  transform: scale(2);
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+
+.grid-item a,
+.grid-item h2{
+  text-decoration: none;
+  color: white;
+  display: block;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.grid-item:hover img{
+  transform: scale(5);
+  z-index: 0;
+  opacity: 1;
+}
+
+.grid-item:hover h2,
+.grid-item:hover a{
+  transform: scale(2);
+  z-index: 0;
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .grid-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
